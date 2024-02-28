@@ -19,3 +19,19 @@ library(tidyr)
 ```{r}
 lobster_abundance <- read_csv("../data/Lobster_Abundance_All_Years_20220829.csv")
 ```
+
+## Replace -99999 with NA values
+```{r}
+lobster_abundance <- lobster_abundance %>% 
+    mutate(SIZE_MM = na_if(SIZE_MM, -99999))
+# To get unique values from a column named 'column_name'
+unique(lobster_abundance$SIZE_MM)
+```
+
+## Filter out Naples Reef data
+```{r}
+not_napl <- lobster_abundance %>% 
+    filter(SITE != "NAPL")
+unique(lobster_abundance$SITE)
+```
+
