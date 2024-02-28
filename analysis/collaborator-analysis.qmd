@@ -28,3 +28,24 @@ unique(lobster_traps$FISHING_SEASON)
 summary(lobster_traps)
 ```
 
+convert NAs
+```{r}
+lobster_traps <- lobster_traps %>% 
+  mutate(TRAPS = na_if(TRAPS, -99999))
+```
+
+filter for specific locations
+```{r}
+#no Naples
+lobster_traps_nonaples <- lobster_traps %>% 
+  filter(SITE != "NAPL")
+
+unique(lobster_traps_nonaples$SITE)
+
+#Carpinteria reef only, trap floats > 20
+carp_20_traps <- lobster_traps %>% 
+    filter(SITE == "CARP" & TRAPS > 20)
+summary(carp_20_traps)
+
+```
+
