@@ -35,3 +35,9 @@ not_napl <- lobster_abundance %>%
 unique(lobster_abundance$SITE)
 ```
 
+## Filter for Arroyo Quemado lobsters
+```{r}
+aque_70mm <- lobster_abundance %>% 
+    filter(SITE == "AQUE" & SIZE_MM >= 70)
+aque_70mm
+```
