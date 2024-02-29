@@ -35,9 +35,47 @@ not_napl <- lobster_abundance %>%
 unique(lobster_abundance$SITE)
 ```
 
-## Filter for Arroyo Quemado lobsters
+## Filter Arroyo Quemado lobsters
 ```{r}
 aque_70mm <- lobster_abundance %>% 
     filter(SITE == "AQUE" & SIZE_MM >= 70)
 aque_70mm
 ```
+
+## Exercise: Data Visualization
+```{r}
+hist_plot <- ggplot(data = lobster_abundance, aes(x = SIZE_MM)) +
+  geom_histogram(fill = "skyblue", color = "black") +
+  facet_wrap(~SITE)
+hist_plot
+
+ggsave("../figs/lobster_hist.png", plot = hist_plot, width = 10, height = 6)
+```
+
+## Total # of lobsters observed
+```{r}
+lobsters_summarize <- lobster_abundance %>% 
+  group_by(SITE, YEAR) %>%
+  mutate(LOBSTER_COLOR = "red") %>% 
+  summarize(COUNT = n())
+lobsters_summarize
+```
+
+# Line and point plots
+```{r}
+# line plot
+line_plot <-ggplot(data = lobsters_summarize, aes(x = YEAR, y = COUNT)) +
+  geom_line(aes(color = SITE)) 
+line_plot
+
+ggsave("../figs/line_plot.png", plot = line_plot, width = 10, height = 6)
+
+# line and point plot
+line_point_plot <-ggplot(data = lobsters_summarize, aes(x = YEAR, y = COUNT)) +
+  geom_point(aes(color = SITE)) +
+  geom_line(aes(color = SITE)) 
+line_point_plot
+
+ggsave("../figs/line_point_plot.png", plot = line_point_plot, width = 10, height = 6)
+```
+
