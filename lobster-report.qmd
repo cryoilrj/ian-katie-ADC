@@ -10,8 +10,8 @@ Abstract: Data on abundance, size and fishing pressure of California spiny lobst
 
 Owner plot
 ![Lobster abundance histogram](figs/lobster_hist.png)
-Showing lobster abundance around California
+Showing lobster abundance around California.
 
 Collaborator plot
 ![Traps fishing pressure](figs/traps-fishing-pressure.jpg)
-Number of lobster traps and fishing pressure around California
+Number of lobster traps and fishing pressure around California.
