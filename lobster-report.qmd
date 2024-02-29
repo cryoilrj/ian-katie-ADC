@@ -14,4 +14,4 @@ Showing lobster abundance around California.
 
 Collaborator plot
 ![Traps fishing pressure](figs/traps-fishing-pressure.jpg)
-Number of lobster traps and fishing pressure around California.
+# of lobster traps and fishing pressure around California.
