@@ -1,7 +1,7 @@
 ---
 title: "Lobster Report"
 format: html
-authors: Ian Lee, Katie Benett
+authors: Ian Lee, Katie Bennett
 ---
 
 Citation: Santa Barbara Coastal LTER, D. Reed, and R. Miller. 2022. SBC LTER: Reef: Abundance, size and fishing effort for California Spiny Lobster (Panulirus interruptus), ongoing since 2012 ver 8. Environmental Data Initiative. https://doi.org/10.6073/pasta/25aa371650a671bafad64dd25a39ee18 (Accessed 2024-02-29).
